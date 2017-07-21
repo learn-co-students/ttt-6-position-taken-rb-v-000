@@ -1,4 +1,4 @@
 def position_taken?(board, index)
-  (board[index] == "")? true:false
-  (board[index])== "X" "O")? true
+  (board[index] == " " || "")? false:true
+  (board[index] == "X" || board[index] =="O")
 end
