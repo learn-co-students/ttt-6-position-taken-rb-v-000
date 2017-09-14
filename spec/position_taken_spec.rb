@@ -5,6 +5,7 @@ describe '#position_taken? in lib/position_taken.rb' do
     board = []
     index = 0
 
+
     expect{position_taken?(board, index)}.to_not raise_error
   end
 
