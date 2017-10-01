@@ -1,3 +1,3 @@
-def position_taken?(board, position)
-  !(board[position].nil? || board[position] == " " || board[position] == "")
+def position_taken?(board, index)
+  !(board[index].nil? || board[index] == " " || board[index] == "")
  end
