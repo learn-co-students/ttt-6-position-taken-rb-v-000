@@ -8,7 +8,7 @@ describe '#position_taken? in lib/position_taken.rb' do
     expect{position_taken?(board, index)}.to_not raise_error
   end
 
-  it 'returns false if the board has an empty string " " in the desired index' do
+  it 'returns false if the board has an empty string " " in the index' do
     board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     index = 0
 
