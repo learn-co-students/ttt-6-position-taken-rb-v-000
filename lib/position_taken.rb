@@ -7,3 +7,5 @@ def position_taken?(board, index)
   end
   taken
 end
+
+#Methods that return either true or false have a question mark at the end
