@@ -1,7 +1,7 @@
-def position_taken?(array, index_number)
-  if  array[index_number] == "" || array[index_number == " "]
+def position_taken?(board, index)
+  if  (board[index] == "") || (board[index] == " ") || (board[index] == nil)
     return false
-  elsif array[index_number] != "" || array[index_number] != " "
+  elsif (board[index] != "") || (board[index] != " ")
     return true
   end
 end 
