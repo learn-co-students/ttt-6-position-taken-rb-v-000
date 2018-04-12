@@ -1,8 +1,9 @@
+def valid_move?(board,position)
+  position.to_i.between?(1,9) and not position_taken?(board, position.to_i - 1)
+end
 
-
-m = valid_move?(board, index)
-  if m == true
-    move(board, index, current_player(board))
-  else m == false
-    until m == true
-      puts "Sorry, that was an invalid move. Please enter 1-9:"
+def position_taken?(board,position)
+  return false if [" ", "", nil].include?(board[position])
+  return true if ["X", "O"].include?(board[position])
+  raise "#{board[position]} is not a valid move"
+end
