@@ -8,4 +8,4 @@ def position_taken?(board, index)
     board[index] == 'O'
     true
   end
-end  
+end
