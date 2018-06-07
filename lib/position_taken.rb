@@ -1,8 +1,12 @@
-def position_taken?(board, input)
-
-  if board[input] == " " || board[input] == "" || board[input] == nil
-       return false;
-     else
-       return true;
-    end
+def position_taken?(board, index)
+  
+  
+ if(board[index] == "" || board[index] == " " || board[index] == nil)
+false
+ 
+elsif (board[index] != "" || board[index] != " ")
+ true
+  
+   
+ end
 end
