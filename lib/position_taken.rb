@@ -10,4 +10,5 @@ def position_taken?(board, index)
     return_value = false
   end
   return return_value
+
 end
