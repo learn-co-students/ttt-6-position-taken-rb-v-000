@@ -11,3 +11,4 @@ def position_taken?(board, index)
        false
     end
 end
+#this commit doesnt work properly since v8
