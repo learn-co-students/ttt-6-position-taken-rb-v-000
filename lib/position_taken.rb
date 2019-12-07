@@ -1,9 +1,16 @@
-def valid_move?(board,position)
-  position.to_i.between?(1,9) and not position_taken?(board, position.to_i - 1)
-end
+def position_taken?(board, index)
+  # basic solution:
 
-def position_taken?(board,position)
-  return false if [" ", "", nil].include?(board[position])
-  return true if ["X", "O"].include?(board[position])
-  raise "#{board[position]} is not a valid move"
+  # taken = nil
+  # if (board[index] ==  " " || board[index] == "" || board[index] == nil)
+  #   taken = false
+  # else
+  #   taken = true
+  # end
+  # taken
+
+  # advanced solution w/ ternary operator
+  (board[index] ==  " " || board[index] == "" || board[index] == nil) ?
+    false : true
+
 end
