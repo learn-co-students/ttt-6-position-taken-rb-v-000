@@ -1,8 +1,8 @@
 # A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # gem "rails"
 
+gem 'pry'
 gem 'rspec'
-    gem 'pry'
-    gem 'tux'
+gem 'tux'
