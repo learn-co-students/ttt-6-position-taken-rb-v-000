@@ -51,6 +51,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bond (~> 0.5.1)
   pry
   rspec
   tux
+
+BUNDLED WITH
+   2.0.2
