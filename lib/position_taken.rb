@@ -5,6 +5,4 @@ def position_taken?(board, index)
    true
  end
 #  board == " "
-
-
 end# code your #position_taken? method here!
