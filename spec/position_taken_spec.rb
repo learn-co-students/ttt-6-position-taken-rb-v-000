@@ -1,44 +1,17 @@
-require_relative '../lib/position_taken.rb'
+  board = ["X", "X", nil, "", "O", "X", "X", " "]
 
-describe '#position_taken? in lib/position_taken.rb' do
-  it 'accepts a board and the index to check as arguments' do
-    board = []
-    index = 0
+def valid_move?(board,position)
+  position.to_i.between?(1,9) and not position_taken?(board, position.to_i - 1)
+end
 
-    expect{position_taken?(board, index)}.to_not raise_error
-  end
+def position_taken?(board,position)
+  return false if [" ", "", nil].include?(board[position])
+  return true if ["X", "O"].include?(board[position])
+  raise "#{board[position]} is not a valid move"
+end
 
-  it 'returns false if the board has an empty string " " in the desired index' do
-    board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    index = 0
+def position_taken?(board, location)
+index = board[location.to_i - 1]
 
-    expect(position_taken?(board, index)).to be(false)
-  end
-
-   it 'returns false if the board has an empty string "" in the index' do
-    board = ["", " ", " ", " ", " ", " ", " ", " ", " "]
-    index = 0
-
-    expect(position_taken?(board, index)).to be(false)
-  end
-
-  it 'returns false if the board has nil in the index' do
-    board = [nil, " ", " ", " ", " ", " ", " ", " ", " "]
-    index = 0
-
-    expect(position_taken?(board, index)).to be(false)
-
-    index = 1
-    expect(position_taken?(board, index)).to be(false)
-  end
-
-  it 'returns true if the board has a value of "X" or "O" in the index' do
-    board = ["X", " ", " ", " ", " ", " ", " ", " ", "O"]
-
-    index = 0
-    expect(position_taken?(board, index)).to be(true)
-
-    index = 8
-    expect(position_taken?(board, index)).to be(true)
-  end
+index != " " && index != "" && index != nil
 end
