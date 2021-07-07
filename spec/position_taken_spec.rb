@@ -1,4 +1,5 @@
 require_relative '../lib/position_taken.rb'
+#all tests passing
 
 describe '#position_taken? in lib/position_taken.rb' do
   it 'accepts a board and the index to check as arguments' do
